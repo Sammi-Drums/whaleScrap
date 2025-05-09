@@ -1,0 +1,151 @@
+
+/* ============================================
+   🌊 WhaleWatch Global Styles + Utility Classes
+   ============================================ */
+
+/* 1. Root Theme Variables */
+:root {
+  --font-main: 'Manrope', sans-serif;
+
+  /* Light Mode */
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --card-bg: #f9f9f9;
+
+  --gradient-text: linear-gradient(to right, #0575e6, #00f260);
+  --gradient-bg: linear-gradient(135deg, #e3f2fd, #ffffff);
+
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. Dark Mode Overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #0f0c29;
+    --text-color: #e0e0e0;
+    --card-bg: rgba(255, 255, 255, 0.05);
+
+    --gradient-text: linear-gradient(to right, #00f260, #0575e6);
+    --gradient-bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+
+    --shadow-card: 0 10px 25px rgba(0, 242, 96, 0.1);
+  }
+}
+
+/* 3. Base Styles */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 4. Utility Classes */
+
+/* === Layout === */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* === Padding === */
+.px-base {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-base {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-md {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-md {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.p-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* === Margin === */
+.mt-base {
+  margin-top: 1rem;
+}
+
+.mb-base {
+  margin-bottom: 1rem;
+}
+
+.mt-lg {
+  margin-top: 2rem;
+}
+
+.mb-lg {
+  margin-bottom: 2rem;
+}
+
+/* === Text === */
+.text-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-xl {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* === Cards / Boxes === */
+.card {
+  background: var(--card-bg);
+  box-shadow: var(--shadow-card);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+/* 5. Responsive Enhancements */
+@media (min-width: 768px) {
+  .px-md {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .py-md {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .heading-xl {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .p-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
