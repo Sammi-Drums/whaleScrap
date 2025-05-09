@@ -1,0 +1,88 @@
+.app__hero {
+    /* background: var(--gradient-bg); */
+    width: 100%;
+
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    padding-top: 4rem;
+
+}
+
+.app__hero-text-content {
+    flex: 1; 
+    /* max-width: 500px; */
+}
+
+
+.app__hero-sub-heading {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* .app__hero-heading span {
+
+} */
+
+
+
+.app__hero-input {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: var(--card-bg);
+    color: #f8f8f8;
+    font-family: var(--font-body);
+}
+
+.app__hero-btns {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.app__hero-text-content .btn {
+    font-family: var(--font-body);
+    font-size: 17px;
+} 
+
+.hero-cta-2 {
+    background-color: var(--card-bg);
+    color: #fff;
+}
+
+.app__hero-image {
+    flex: 1;
+    background: var(--gradient-bg);
+    border-radius: 50%;
+
+    
+
+}
+
+.app__hero-image img {
+    width: 100%;
+}
+
+@media screen  and (max-width: 830px){
+    .app__hero {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .app__hero-image {
+        margin-bottom: 2rem;
+
+    }
+
+    .app__hero-text-content {
+        text-align: center;
+        width: 100%;
+        order: 2;
+    }
+
+    .app__hero-btns {
+        justify-content: center;
+    }
+}

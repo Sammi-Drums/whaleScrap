@@ -1,0 +1,88 @@
+.app__about-stats-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+    
+
+}
+
+.app__about-stats-row_item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.stat-digit {
+    font-family: var(--font-heading);
+    font-size: 34px;
+}
+
+.stat-title {
+    font-family: var(--font-body);
+    font-size: 30px;
+}
+
+.app__about-features {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.app__about-features-desc {
+    flex: 1;
+}
+
+.features__btn {
+    background: var(--card-bg);
+}
+
+.features__btn-link {
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+
+.app__features-features {
+    flex: 1;
+}
+
+.app__about-feature-card {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   padding: .8rem;
+   transition: all .3s ease-in-out;
+    
+}
+
+.app__about-feature-card:hover {
+    background-color: var(--card-bg);
+    border-radius: .5rem;
+    scale: 1.05;
+}
+
+icon-parent {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    background: var(--gradient-text);
+
+}
+
+.app__about-features-icon {
+    color: #0099ff;
+}
+
+.app__features-title {
+    font-size: 1.2rem;
+    font-family: 'Poppins';
+}
+
+@media screen and (max-width: 830px) {
+    .app__about-features {
+        flex-direction: column;
+    }
+}
