@@ -1,0 +1,82 @@
+.app__services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+.app__services-card {
+    background: var(--card-bg);
+    box-shadow: var(--shadow-card);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .app__services-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .app__services-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .app__services-header h2 {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .app__services-emoji {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  
+  .app__services-features {
+    padding-left: 1.2rem;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    list-style: disc;
+  }
+  
+  .app__services-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+  }
+
+  .bullet-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4ade80; /* soft green */
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .btn-cta {
+    margin-top: 1.5rem;
+    background: var(--gradient-text);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    color: #0a0f1a;
+  }
+  

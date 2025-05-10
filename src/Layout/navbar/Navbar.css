@@ -2,6 +2,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 
     position: fixed;
     top: 0;
@@ -56,7 +57,7 @@ nav {
 }
 
 .btn:hover .starter-btn {
-    color: #fff;
+    color: #0a0f1a;
 }
 
 .app__navbar-menu {
@@ -80,13 +81,37 @@ nav {
 .app__navbar-smallscreen-nav {
     position: absolute;
     height: 100vh;
-    width: 50vh;
-    box-shadow: var(--shadow-card);
-    background: var(--gradient-bg);
+    width: 70%;
+    background-color: #0a0f1a;
     top: 0;
     right: 0;
+    transform: translateX(100%);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
 
     padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s ease, opacity 0.3s ease;
+    z-index: 10;
+
+}
+
+.app__navbar-smallscreen-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+  }
+  
+
+
+
+.app__navbar-smallscreen-nav.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
 
 }
 
@@ -99,9 +124,6 @@ nav {
 }
 
 .app__close-icon:hover {
-    
-    /* color: #fff; */
-    
     scale: 1.1;
     
 }

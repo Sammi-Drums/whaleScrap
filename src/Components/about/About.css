@@ -24,13 +24,13 @@
     font-size: 30px;
 }
 
-.app__about-features {
+.app__about-features, .app__about-news {
     display: flex;
     align-items: center;
     gap: 3rem;
 }
 
-.app__about-features-desc {
+.app__about-features-desc, .app__about-news-desc {
     flex: 1;
 }
 
@@ -41,7 +41,11 @@
 .features__btn-link {
     font-size: 1.1rem;
     font-family: 'Poppins';
-    color: #fff;
+    color: #f8f8f8;
+}
+
+.features__btn:hover .features__btn-link {
+    color: #0a0f1a;
 }
 
 
@@ -81,8 +85,16 @@ icon-parent {
     font-family: 'Poppins';
 }
 
+.app__about-news-img {
+    flex: 1;
+}
+
+.app__about-news-img img {
+    width: 100%;
+}
+
 @media screen and (max-width: 830px) {
-    .app__about-features {
+    .app__about-features, .app__about-news {
         flex-direction: column;
     }
 }

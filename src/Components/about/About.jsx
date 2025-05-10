@@ -18,7 +18,7 @@ const FeatureCard = ({icon:Icon, title, content, index}) => (
 
 const About = () => {
   return (
-    <section className='px-md py-md app__about' id='about'>
+    <section className='px-md p-section app__about' id='about'>
         <h1
             className='app__about-heading py-base heading-xl'
         >
@@ -41,7 +41,7 @@ const About = () => {
           
         </div>
         <div
-          className='app__about-features p-section' 
+          className='app__about-features py-md' 
         >
           <div
             className='app__about-features-desc  mb-lg'
@@ -75,6 +75,41 @@ const About = () => {
             ))
            }
           </div>
+        </div>
+
+        <div
+          className='app__about-news py-md' 
+        >
+
+          <div
+            className='app__about-news-img'
+          >
+            <img  src='src\assets\bill.png'/>
+          </div>
+          <div
+            className='app__about-news-desc  mb-lg'
+          >
+            <h1
+              className='app__about-heading py-base heading-xl'
+            >
+             Latest <span>Crypto gist</span>
+            </h1>
+
+            <p className='app__about-txt py-md'>
+              We will Provide you with the hottest gist on the cryptoverse like who made the latest windfall, current trending crypto pairs and most wallet exciting news.
+            </p>
+
+            <button 
+             className='btn features__btn'
+            >
+              <Link to={'/'} className=' features__btn-link'>
+                Join Now
+              </Link>
+            </button>
+
+          </div>
+
+          
         </div>
     </section>
   )

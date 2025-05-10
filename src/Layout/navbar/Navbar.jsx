@@ -66,30 +66,26 @@ const Navbar = () => {
 
         />
 
-        {
-            isOpen && (
-                <div className='app__navbar-smallscreen-nav'>
+        <div className={`app__navbar-smallscreen-nav ${isOpen? 'open' : ''}`}>
                     
-                    <FiX 
-                        className='app__close-icon'
-                        onClick={() => setIsOpen(false)}
-                    />
+            <FiX 
+                className='app__close-icon'
+                onClick={() => setIsOpen(false)}
+            />
 
-                    <div
-                        className='smallscreen-nav'
-                    >
-                        {
-                            navLinks.map(({id, label}) => (
-                                <a 
-                                    href={`/#${id}`} key={id}
-                                    onClick={() => setIsOpen(false)}
-                                >{label}</a>
-                            ))
-                        }
-                    </div>
-                </div>
-            )
-        }
+            <div
+                className='smallscreen-nav'
+            >
+                {
+                    navLinks.map(({id, label}) => (
+                        <a 
+                            href={`/#${id}`} key={id}
+                            onClick={() => setIsOpen(false)}
+                        >{label}</a>
+                    ))
+                }
+            </div>
+        </div>
 
     </nav>
   )
